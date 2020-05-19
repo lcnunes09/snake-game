@@ -71,6 +71,8 @@ function iniciarJogo(){
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
         score += 10;
+        var input = document.getElementById("pontuacao");
+        input.value = score ;
     }
 
     let newHead = {
