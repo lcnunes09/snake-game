@@ -36,7 +36,7 @@ No intuito de me desenvolver em HTML, CSS e JavaScript, segue as funcionalidades
 | :x: | Possibilidade de criar um jogo novo. | - | [#5](https://github.com/lcnunes09/snake-game/issues/5 "#5") |
 | :x: | Mudar as cores para paleta Dark Blue. | - | [#6](https://github.com/lcnunes09/snake-game/issues/6 "#6") |
 | :x: | Adicionar possibilidade de adicionar bordas. | - | [#7](https://github.com/lcnunes09/snake-game/issues/7 "#7") |
-| :x: | Aumentar a velocidade da cobra a cada vez que a cobra comer a comida. | - | [#8](https://github.com/lcnunes09/snake-game/issues/8 "#8") |
+| :heavy_check_mark:  | Aumentar a velocidade da cobra a cada vez que a cobra comer a comida. | 21/05/2020 | [#8](https://github.com/lcnunes09/snake-game/issues/8 "#8") |
 
 #### Release 3 | Implementações Extras :clock1: Finalizar até Junho 13, 2020
 | Realizado?  | Funcionalidade  | Data Implementação | Issue # |
