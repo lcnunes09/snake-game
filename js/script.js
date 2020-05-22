@@ -12,6 +12,9 @@ let food = {
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 let score = 0;
+let level = 0;
+let velocidade = 200; // Velocidade mínima
+let velocidadeLevel = 200;
 
 function criarBG(){
     context.fillStyle = "lightgreen";
@@ -71,8 +74,19 @@ function iniciarJogo(){
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
         score += 10;
-        var input = document.getElementById("pontuacao");
-        input.value = score ;
+        level += 1;
+        velocidade -=2;
+
+        var inputPontuacao = document.getElementById("pontuacao");
+        inputPontuacao.value = score;
+
+        if (level % 5 === 0){
+            velocidadeLevel -= 10;
+            velocidadeCobrinha(velocidadeLevel);
+        } else {
+            velocidadeCobrinha(velocidadeLevel);
+        }
+        
     }
 
     let newHead = {
@@ -83,5 +97,11 @@ function iniciarJogo(){
     snake.unshift(newHead);
 }
 
-let jogo = setInterval(iniciarJogo, 100);
+function velocidadeCobrinha(velocity){
+    clearInterval(jogo);
+    jogo = setInterval(iniciarJogo, velocity);
+    
+}
+
+let jogo = setInterval(iniciarJogo, 200);
 
