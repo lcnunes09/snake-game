@@ -15,6 +15,7 @@ let score = 0;
 let level = 0;
 let velocidade = 200; // Velocidade mínima
 let velocidadeLevel = 200;
+let foodSameSnake = 0;
 
 function criarBG(){
     context.fillStyle = "lightgreen";
@@ -31,6 +32,29 @@ function criarCobrinha(){
 function drawFood(){
     context.fillStyle = "red";
     context.fillRect(food.x, food.y, box, box);
+}
+
+function foodNotOnSnake(){
+    if (food.x) {
+        prevFoodX = food.x;
+    }
+
+    if (food.y){
+        prevFoodY = food.y;
+    }
+
+    food.x = Math.floor(Math.random() * 15 + 1) * box;
+    food.y = Math.floor(Math.random() * 15 + 1) * box;
+    console.log (prevFoodX, prevFoodY, food.x, food.y);
+    if (prevFoodY === food.y && prevFoodX === food.x) {
+        foodNotOnSnake();
+    } else {
+        snake.forEach(function(el){
+            if(((el.x === food.x) && (el.y === food.y))) {
+                foodNotOnSnake();
+            }
+        });
+    }
 }
 
 document.addEventListener('keydown', update);
@@ -71,8 +95,9 @@ function iniciarJogo(){
     if (snakeX != food.x || snakeY != food.y){
         snake.pop();
     } else {
-        food.x = Math.floor(Math.random() * 15 + 1) * box;
-        food.y = Math.floor(Math.random() * 15 + 1) * box;
+        
+        foodNotOnSnake();
+
         score += 10;
         level += 1;
         velocidade -=2;
@@ -100,7 +125,6 @@ function iniciarJogo(){
 function velocidadeCobrinha(velocity){
     clearInterval(jogo);
     jogo = setInterval(iniciarJogo, velocity);
-    
 }
 
 let jogo = setInterval(iniciarJogo, 200);
