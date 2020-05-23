@@ -51,5 +51,5 @@ No intuito de me desenvolver em HTML, CSS e JavaScript, segue as funcionalidades
 #### :beetle: Issues mapeados :clock1: Finalizar até Junho 20, 2020
 | Realizado?  | Issue  | Data Implementação | Issue # |
 | :------------ |:--------------- |:-----:|:-----:|
-| :x: | Não permitir que a comida apareça no corpo da cobrinha. | - | [#1](https://github.com/lcnunes09/snake-game/issues/1 "#1") |
+| :heavy_check_mark: | Não permitir que a comida apareça no corpo da cobrinha. | 23/05/2020 | [#1](https://github.com/lcnunes09/snake-game/issues/1 "#1") |
 | :x: | As vezes a cobrinha some da tela quando deveria voltar pelo lado oposto. | - | [#2](https://github.com/lcnunes09/snake-game/issues/1 "#2") |
